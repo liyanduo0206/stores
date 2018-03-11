@@ -1,6 +1,8 @@
 package com.myshop.store.domain;
 
 import com.myshop.store.utils.Content;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,6 +11,8 @@ import java.util.*;
 /**
  * 条形码管理
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "bar_code_manage")
 public class BarCodeManage implements Serializable {
@@ -52,59 +56,5 @@ public class BarCodeManage implements Serializable {
     @JoinColumn(name = "file_id")
     private FileManage fileManage;
 
-    public Integer getBarCodeId() {
-        return barCodeId;
-    }
 
-    public void setBarCodeId(Integer barCodeId) {
-        this.barCodeId = barCodeId;
-    }
-
-    public String getBarCodeVal() {
-        return barCodeVal;
-    }
-
-    public void setBarCodeVal(String barCodeVal) {
-        this.barCodeVal = barCodeVal;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public String getBarCodeType() {
-        return barCodeType;
-    }
-
-    public void setBarCodeType(String barCodeType) {
-        this.barCodeType = barCodeType;
-    }
-
-    public List<Product> getProduct() {
-        return product;
-    }
-
-    public void setProduct(List<Product> product) {
-        this.product = product;
-    }
-
-    public FileManage getFileManage() {
-        return fileManage;
-    }
-
-    public void setFileManage(FileManage fileManage) {
-        this.fileManage = fileManage;
-    }
 }

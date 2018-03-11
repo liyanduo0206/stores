@@ -1,9 +1,13 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
-
+@Setter
+@Getter
 @Entity
 @Table(name = "store")
 public class Store implements Serializable {
@@ -91,139 +95,5 @@ public class Store implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "store")
     private List<Brand> brand = new ArrayList<>();
 
-    public Integer getStoreId() {
-        return storeId;
-    }
 
-    public void setStoreId(Integer storeId) {
-        this.storeId = storeId;
-    }
-
-    public String getSteName() {
-        return steName;
-    }
-
-    public void setSteName(String steName) {
-        this.steName = steName;
-    }
-
-    public String getSteCode() {
-        return steCode;
-    }
-
-    public void setSteCode(String steCode) {
-        this.steCode = steCode;
-    }
-
-    public String getSteStatus() {
-        return steStatus;
-    }
-
-    public void setSteStatus(String steStatus) {
-        this.steStatus = steStatus;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getIntroduction() {
-        return introduction;
-    }
-
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction;
-    }
-
-    public String getSteDesc() {
-        return steDesc;
-    }
-
-    public void setSteDesc(String steDesc) {
-        this.steDesc = steDesc;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public List<Persion> getPersion() {
-        return persion;
-    }
-
-    public void setPersion(List<Persion> persion) {
-        this.persion = persion;
-    }
-
-    public List<Address> getAddress() {
-        return address;
-    }
-
-    public void setAddress(List<Address> address) {
-        this.address = address;
-    }
-
-    public List<Role> getRole() {
-        return role;
-    }
-
-    public void setRole(List<Role> role) {
-        this.role = role;
-    }
-
-    public List<Supplier> getSupplier() {
-        return supplier;
-    }
-
-    public void setSupplier(List<Supplier> supplier) {
-        this.supplier = supplier;
-    }
-
-    public List<User> getUser() {
-        return user;
-    }
-
-    public void setUser(List<User> user) {
-        this.user = user;
-    }
-
-    public List<Dict> getDict() {
-        return dict;
-    }
-
-    public void setDict(List<Dict> dict) {
-        this.dict = dict;
-    }
-
-    public List<Product> getProduct() {
-        return product;
-    }
-
-    public void setProduct(List<Product> product) {
-        this.product = product;
-    }
-
-    public List<ProductOrder> getProductOrder() {
-        return productOrder;
-    }
-
-    public void setProductOrder(List<ProductOrder> productOrder) {
-        this.productOrder = productOrder;
-    }
-
-    public List<Brand> getBrand() {
-        return brand;
-    }
-
-    public void setBrand(List<Brand> brand) {
-        this.brand = brand;
-    }
 }

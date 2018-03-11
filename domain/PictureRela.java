@@ -2,10 +2,13 @@ package com.myshop.store.domain;
 
 
 import com.myshop.store.utils.Content;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
+@Setter
+@Getter
 @Entity
 @Table(name = "picture_rela")
 public class PictureRela implements Serializable {
@@ -42,51 +45,5 @@ public class PictureRela implements Serializable {
     @JoinColumn(name = "file_id")
     private FileManage fileManage;
 
-    public Integer getRelano() {
-        return relano;
-    }
 
-    public void setRelano(Integer relano) {
-        this.relano = relano;
-    }
-
-    public String getRelaType() {
-        return relaType;
-    }
-
-    public void setRelaType(String relaType) {
-        this.relaType = relaType;
-    }
-
-    public String getRelaId() {
-        return relaId;
-    }
-
-    public void setRelaId(String relaId) {
-        this.relaId = relaId;
-    }
-
-    public String getPteStatus() {
-        return pteStatus;
-    }
-
-    public void setPteStatus(String pteStatus) {
-        this.pteStatus = pteStatus;
-    }
-
-    public String getOperator() {
-        return operator;
-    }
-
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
-
-    public FileManage getFileManage() {
-        return fileManage;
-    }
-
-    public void setFileManage(FileManage fileManage) {
-        this.fileManage = fileManage;
-    }
 }

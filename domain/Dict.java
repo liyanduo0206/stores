@@ -1,5 +1,8 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.*;
 import java.util.*;
@@ -7,6 +10,8 @@ import java.util.*;
 /**
  * 字典
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "dict")
 public class Dict implements Serializable {
@@ -45,59 +50,5 @@ public class Dict implements Serializable {
     @JoinColumn(name = "store_id")
     private Store store;
 
-    public Integer getDictId() {
-        return dictId;
-    }
 
-    public void setDictId(Integer dictId) {
-        this.dictId = dictId;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGrup() {
-        return grup;
-    }
-
-    public void setGrup(String grup) {
-        this.grup = grup;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public List<DictDetial> getDictDetial() {
-        return dictDetial;
-    }
-
-    public void setDictDetial(List<DictDetial> dictDetial) {
-        this.dictDetial = dictDetial;
-    }
-
-    public Store getStore() {
-        return store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
-    }
 }

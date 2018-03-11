@@ -1,6 +1,8 @@
 package com.myshop.store.domain;
 
 import com.myshop.store.utils.Content;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,6 +11,8 @@ import java.util.*;
 /**
  * 优惠活动
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "preferential")
 public class Preferential implements Serializable {
@@ -59,83 +63,5 @@ public class Preferential implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "preferential")
     private List<SalePromotion> salePromotionnew = new ArrayList<>();
 
-    public Integer getPreferentialId() {
-        return preferentialId;
-    }
 
-    public void setPreferentialId(Integer preferentialId) {
-        this.preferentialId = preferentialId;
-    }
-
-    public int getStoreId() {
-        return storeId;
-    }
-
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getScope() {
-        return scope;
-    }
-
-    public void setScope(String scope) {
-        this.scope = scope;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public int getOrderIndex() {
-        return orderIndex;
-    }
-
-    public void setOrderIndex(int orderIndex) {
-        this.orderIndex = orderIndex;
-    }
-
-    public List<PreferentialPersion> getPreferentialPersion() {
-        return preferentialPersion;
-    }
-
-    public void setPreferentialPersion(List<PreferentialPersion> preferentialPersion) {
-        this.preferentialPersion = preferentialPersion;
-    }
-
-    public List<SalePromotion> getSalePromotionnew() {
-        return salePromotionnew;
-    }
-
-    public void setSalePromotionnew(List<SalePromotion> salePromotionnew) {
-        this.salePromotionnew = salePromotionnew;
-    }
 }

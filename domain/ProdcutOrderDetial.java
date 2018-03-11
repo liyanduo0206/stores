@@ -1,9 +1,13 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
-
+@Setter
+@Getter
 @Entity
 @Table(name = "product_order_detial")
 public class ProdcutOrderDetial implements Serializable {
@@ -43,51 +47,4 @@ public class ProdcutOrderDetial implements Serializable {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    public Integer getOrderDetialId() {
-        return orderDetialId;
-    }
-
-    public void setOrderDetialId(Integer orderDetialId) {
-        this.orderDetialId = orderDetialId;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public ProductOrder getProductOrder() {
-        return productOrder;
-    }
-
-    public void setProductOrder(ProductOrder productOrder) {
-        this.productOrder = productOrder;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
 }

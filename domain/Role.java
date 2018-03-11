@@ -1,5 +1,8 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,6 +12,8 @@ import java.util.List;
 /**
  * 角色
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "role")
 public class Role implements Serializable {
@@ -55,67 +60,4 @@ public class Role implements Serializable {
     @JoinColumn(name = "store_id")
     private Store store;
 
-    public Integer getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
-    }
-
-    public String getRoleCode() {
-        return roleCode;
-    }
-
-    public void setRoleCode(String roleCode) {
-        this.roleCode = roleCode;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
-
-    public String getRoleDesc() {
-        return roleDesc;
-    }
-
-    public void setRoleDesc(String roleDesc) {
-        this.roleDesc = roleDesc;
-    }
-
-    public String getOperator() {
-        return operator;
-    }
-
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public List<PersionRole> getPersionRole() {
-        return persionRole;
-    }
-
-    public void setPersionRole(List<PersionRole> persionRole) {
-        this.persionRole = persionRole;
-    }
-
-    public Store getStore() {
-        return store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
-    }
 }

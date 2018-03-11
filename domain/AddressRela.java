@@ -1,11 +1,13 @@
 package com.myshop.store.domain;
 
+import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * 地址关联
  */
+@Data
 @Entity
 @Table(name = "address_rela")
 public class AddressRela implements Serializable {
@@ -40,51 +42,4 @@ public class AddressRela implements Serializable {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    public long getRelano() {
-        return relano;
-    }
-
-    public void setRelano(long relano) {
-        this.relano = relano;
-    }
-
-    public String getRelaType() {
-        return relaType;
-    }
-
-    public void setRelaType(String relaType) {
-        this.relaType = relaType;
-    }
-
-    public int getRelaId() {
-        return relaId;
-    }
-
-    public void setRelaId(int relaId) {
-        this.relaId = relaId;
-    }
-
-    public String getRelaStatus() {
-        return relaStatus;
-    }
-
-    public void setRelaStatus(String relaStatus) {
-        this.relaStatus = relaStatus;
-    }
-
-    public String getOperator() {
-        return operator;
-    }
-
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
 }

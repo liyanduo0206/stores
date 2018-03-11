@@ -1,8 +1,13 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "menu")
 public class Menu implements Serializable {
@@ -45,67 +50,4 @@ public class Menu implements Serializable {
     @Column(name = "menu_status")
     private String menuStatus;
 
-    public int getMenuId() {
-        return menuId;
-    }
-
-    public void setMenuId(int menuId) {
-        this.menuId = menuId;
-    }
-
-    public int getParentId() {
-        return parentId;
-    }
-
-    public void setParentId(int parentId) {
-        this.parentId = parentId;
-    }
-
-    public int getStoreId() {
-        return storeId;
-    }
-
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
-    }
-
-    public String getMenuName() {
-        return menuName;
-    }
-
-    public void setMenuName(String menuName) {
-        this.menuName = menuName;
-    }
-
-    public String getMenuCode() {
-        return menuCode;
-    }
-
-    public void setMenuCode(String menuCode) {
-        this.menuCode = menuCode;
-    }
-
-    public String getSname() {
-        return sname;
-    }
-
-    public void setSname(String sname) {
-        this.sname = sname;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getMenuStatus() {
-        return menuStatus;
-    }
-
-    public void setMenuStatus(String menuStatus) {
-        this.menuStatus = menuStatus;
-    }
 }

@@ -1,5 +1,8 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -7,6 +10,8 @@ import java.util.*;
 /**
  * 产品订单
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "product_order")
 public class ProductOrder implements Serializable {
@@ -65,85 +70,7 @@ public class ProductOrder implements Serializable {
     @JoinColumn(name = "store_id")
     private Store store;
 
-    public Integer getOrderId() {
-        return orderId;
-    }
 
-    public void setOrderId(Integer orderId) {
-        this.orderId = orderId;
-    }
-
-    public int getPersionId() {
-        return persionId;
-    }
-
-    public void setPersionId(int persionId) {
-        this.persionId = persionId;
-    }
-
-    public Date getOrderTime() {
-        return orderTime;
-    }
-
-    public void setOrderTime(Date orderTime) {
-        this.orderTime = orderTime;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public String getOrderStatus() {
-        return orderStatus;
-    }
-
-    public void setOrderStatus(String orderStatus) {
-        this.orderStatus = orderStatus;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public List<ProdcutOrderDetial> getProdcutOrderDetial() {
-        return prodcutOrderDetial;
-    }
-
-    public void setProdcutOrderDetial(List<ProdcutOrderDetial> prodcutOrderDetial) {
-        this.prodcutOrderDetial = prodcutOrderDetial;
-    }
-
-    public QrCodeManage getQrCodeManage() {
-        return qrCodeManage;
-    }
-
-    public void setQrCodeManage(QrCodeManage qrCodeManage) {
-        this.qrCodeManage = qrCodeManage;
-    }
-
-    public Store getStore() {
-        return store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
-    }
 
     @Override
     public String toString() {

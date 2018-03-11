@@ -1,5 +1,8 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -7,6 +10,8 @@ import java.util.*;
 /**
  * 促销规则
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "sale_promotion")
 public class SalePromotion implements Serializable {
@@ -57,78 +62,6 @@ public class SalePromotion implements Serializable {
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "persion_id")
     private Persion persion;
-
-    public Integer getPromotionId() {
-        return promotionId;
-    }
-
-    public void setPromotionId(Integer promotionId) {
-        this.promotionId = promotionId;
-    }
-
-    public int getStoreId() {
-        return storeId;
-    }
-
-    public void setStoreId(int storeId) {
-        this.storeId = storeId;
-    }
-
-    public String getPtnCode() {
-        return ptnCode;
-    }
-
-    public void setPtnCode(String ptnCode) {
-        this.ptnCode = ptnCode;
-    }
-
-    public String getPtnName() {
-        return ptnName;
-    }
-
-    public void setPtnName(String ptnName) {
-        this.ptnName = ptnName;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public int getProductId() {
-        return productId;
-    }
-
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public Preferential getPreferential() {
-        return preferential;
-    }
-
-    public void setPreferential(Preferential preferential) {
-        this.preferential = preferential;
-    }
-
-    public Persion getPersion() {
-        return persion;
-    }
-
-    public void setPersion(Persion persion) {
-        this.persion = persion;
-    }
 
     @Override
     public String toString() {

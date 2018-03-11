@@ -1,9 +1,14 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "file_manage")
 public class FileManage implements Serializable {
@@ -76,107 +81,4 @@ public class FileManage implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "fileManage")
     private List<QrCodeManage> qrCodeManage = new ArrayList<>();
 
-    public Integer getFileId() {
-        return fileId;
-    }
-
-    public void setFileId(Integer fileId) {
-        this.fileId = fileId;
-    }
-
-    public String getFileType() {
-        return fileType;
-    }
-
-    public void setFileType(String fileType) {
-        this.fileType = fileType;
-    }
-
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
-    public String getFileOldname() {
-        return fileOldname;
-    }
-
-    public void setFileOldname(String fileOldname) {
-        this.fileOldname = fileOldname;
-    }
-
-    public String getFileSuffix() {
-        return fileSuffix;
-    }
-
-    public void setFileSuffix(String fileSuffix) {
-        this.fileSuffix = fileSuffix;
-    }
-
-    public String getFilePath() {
-        return filePath;
-    }
-
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
-    }
-
-    public String getFileUrl() {
-        return fileUrl;
-    }
-
-    public void setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
-    }
-
-    public String getFileStatus() {
-        return fileStatus;
-    }
-
-    public void setFileStatus(String fileStatus) {
-        this.fileStatus = fileStatus;
-    }
-
-    public String getOperator() {
-        return operator;
-    }
-
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public List<PictureRela> getPictureRela() {
-        return pictureRela;
-    }
-
-    public void setPictureRela(List<PictureRela> pictureRela) {
-        this.pictureRela = pictureRela;
-    }
-
-    public List<BarCodeManage> getBarCodeManage() {
-        return barCodeManage;
-    }
-
-    public void setBarCodeManage(List<BarCodeManage> barCodeManage) {
-        this.barCodeManage = barCodeManage;
-    }
-
-    public List<QrCodeManage> getQrCodeManage() {
-        return qrCodeManage;
-    }
-
-    public void setQrCodeManage(List<QrCodeManage> qrCodeManage) {
-        this.qrCodeManage = qrCodeManage;
-    }
 }

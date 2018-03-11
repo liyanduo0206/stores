@@ -1,5 +1,8 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -7,6 +10,8 @@ import java.util.*;
 /**
  * 二维码
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "qr_code_manage")
 public class QrCodeManage implements Serializable {
@@ -48,67 +53,5 @@ public class QrCodeManage implements Serializable {
     @JoinColumn(name = "file_id")
     private FileManage fileManage;
 
-    public Integer getQrCodeId() {
-        return qrCodeId;
-    }
 
-    public void setQrCodeId(Integer qrCodeId) {
-        this.qrCodeId = qrCodeId;
-    }
-
-    public String getQrCodeVal() {
-        return qrCodeVal;
-    }
-
-    public void setQrCodeVal(String qrCodeVal) {
-        this.qrCodeVal = qrCodeVal;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public String getQrCodeType() {
-        return qrCodeType;
-    }
-
-    public void setQrCodeType(String qrCodeType) {
-        this.qrCodeType = qrCodeType;
-    }
-
-    public List<Product> getProduct() {
-        return product;
-    }
-
-    public void setProduct(List<Product> product) {
-        this.product = product;
-    }
-
-    public List<ProductOrder> getProductOrder() {
-        return productOrder;
-    }
-
-    public void setProductOrder(List<ProductOrder> productOrder) {
-        this.productOrder = productOrder;
-    }
-
-    public FileManage getFileManage() {
-        return fileManage;
-    }
-
-    public void setFileManage(FileManage fileManage) {
-        this.fileManage = fileManage;
-    }
 }

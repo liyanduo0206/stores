@@ -1,5 +1,8 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -7,6 +10,8 @@ import java.util.*;
 /**
  * 品牌
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "brand")
 public class Brand implements Serializable {
@@ -50,59 +55,4 @@ public class Brand implements Serializable {
     @JoinColumn(name = "store_id")
     private Store store;
 
-    public Integer getBrandId() {
-        return brandId;
-    }
-
-    public void setBrandId(Integer brandId) {
-        this.brandId = brandId;
-    }
-
-    public String getBrdName() {
-        return brdName;
-    }
-
-    public void setBrdName(String brdName) {
-        this.brdName = brdName;
-    }
-
-    public String getBrdCode() {
-        return brdCode;
-    }
-
-    public void setBrdCode(String brdCode) {
-        this.brdCode = brdCode;
-    }
-
-    public String getBrdDesc() {
-        return brdDesc;
-    }
-
-    public void setBrdDesc(String brdDesc) {
-        this.brdDesc = brdDesc;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public List<Product> getProduct() {
-        return product;
-    }
-
-    public void setProduct(List<Product> product) {
-        this.product = product;
-    }
-
-    public Store getStore() {
-        return store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
-    }
 }

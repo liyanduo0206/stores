@@ -1,5 +1,8 @@
 package com.myshop.store.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -7,6 +10,8 @@ import java.util.Date;
 /**
  * 优惠成员
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "preferential_persion")
 public class PreferentialPersion implements Serializable {
@@ -43,51 +48,5 @@ public class PreferentialPersion implements Serializable {
     @JoinColumn(name = "persion_id")
     private Persion persion;
 
-    public Integer getPreferentialRelano() {
-        return preferentialRelano;
-    }
 
-    public void setPreferentialRelano(Integer preferentialRelano) {
-        this.preferentialRelano = preferentialRelano;
-    }
-
-    public int getOrderIndex() {
-        return orderIndex;
-    }
-
-    public void setOrderIndex(int orderIndex) {
-        this.orderIndex = orderIndex;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getPdate() {
-        return pdate;
-    }
-
-    public void setPdate(Date pdate) {
-        this.pdate = pdate;
-    }
-
-    public Preferential getPreferential() {
-        return preferential;
-    }
-
-    public void setPreferential(Preferential preferential) {
-        this.preferential = preferential;
-    }
-
-    public Persion getPersion() {
-        return persion;
-    }
-
-    public void setPersion(Persion persion) {
-        this.persion = persion;
-    }
 }

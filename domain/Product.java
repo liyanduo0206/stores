@@ -1,6 +1,8 @@
 package com.myshop.store.domain;
 
 import com.myshop.store.utils.Content;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,6 +12,8 @@ import java.util.List;
 /**
  * 产品
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "product")
 public class Product implements Serializable {
@@ -110,157 +114,6 @@ public class Product implements Serializable {
     @JoinColumn(name = "brand_id")
     private Brand brand;
 
-    public Integer getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
-
-    public String getPcode() {
-        return pcode;
-    }
-
-    public void setPcode(String pcode) {
-        this.pcode = pcode;
-    }
-
-    public String getPsname() {
-        return psname;
-    }
-
-    public void setPsname(String psname) {
-        this.psname = psname;
-    }
-
-    public String getPname() {
-        return pname;
-    }
-
-    public void setPname(String pname) {
-        this.pname = pname;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getPurchasingPrice() {
-        return purchasingPrice;
-    }
-
-    public void setPurchasingPrice(double purchasingPrice) {
-        this.purchasingPrice = purchasingPrice;
-    }
-
-    public double getSalePrice() {
-        return salePrice;
-    }
-
-    public void setSalePrice(double salePrice) {
-        this.salePrice = salePrice;
-    }
-
-    public double getEholesalePrice() {
-        return eholesalePrice;
-    }
-
-    public void setEholesalePrice(double eholesalePrice) {
-        this.eholesalePrice = eholesalePrice;
-    }
-
-    public String getPstatus() {
-        return pstatus;
-    }
-
-    public void setPstatus(String pstatus) {
-        this.pstatus = pstatus;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getPdesc() {
-        return pdesc;
-    }
-
-    public void setPdesc(String pdesc) {
-        this.pdesc = pdesc;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public List<ProdcutOrderDetial> getProdcutOrderDetial() {
-        return prodcutOrderDetial;
-    }
-
-    public void setProdcutOrderDetial(List<ProdcutOrderDetial> prodcutOrderDetial) {
-        this.prodcutOrderDetial = prodcutOrderDetial;
-    }
-
-    public List<ProductDetial> getProductDetial() {
-        return productDetial;
-    }
-
-    public void setProductDetial(List<ProductDetial> productDetial) {
-        this.productDetial = productDetial;
-    }
-
-    public Store getStore() {
-        return store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
-    }
-
-    public BarCodeManage getBarCodeManage() {
-        return barCodeManage;
-    }
-
-    public void setBarCodeManage(BarCodeManage barCodeManage) {
-        this.barCodeManage = barCodeManage;
-    }
-
-    public QrCodeManage getQrCodeManage() {
-        return qrCodeManage;
-    }
-
-    public void setQrCodeManage(QrCodeManage qrCodeManage) {
-        this.qrCodeManage = qrCodeManage;
-    }
-
-    public Brand getBrand() {
-        return brand;
-    }
-
-    public void setBrand(Brand brand) {
-        this.brand = brand;
-    }
 
     @Override
     public String toString() {

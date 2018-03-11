@@ -1,10 +1,14 @@
 package com.myshop.store.domain;
 
 import com.myshop.store.utils.Content;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "supplier")
 public class Supplier implements Serializable {
@@ -63,83 +67,4 @@ public class Supplier implements Serializable {
     private Persion persion;
 
 
-    public Integer getSupplierId() {
-        return supplierId;
-    }
-
-    public void setSupplierId(Integer supplierId) {
-        this.supplierId = supplierId;
-    }
-
-    public String getSlrName() {
-        return slrName;
-    }
-
-    public void setSlrName(String slrName) {
-        this.slrName = slrName;
-    }
-
-    public String getSlrSname() {
-        return slrSname;
-    }
-
-    public void setSlrSname(String slrSname) {
-        this.slrSname = slrSname;
-    }
-
-    public String getSlrCode() {
-        return slrCode;
-    }
-
-    public void setSlrCode(String slrCode) {
-        this.slrCode = slrCode;
-    }
-
-    public String getSlrType() {
-        return slrType;
-    }
-
-    public void setSlrType(String slrType) {
-        this.slrType = slrType;
-    }
-
-    public String getQrCodeId() {
-        return qrCodeId;
-    }
-
-    public void setQrCodeId(String qrCodeId) {
-        this.qrCodeId = qrCodeId;
-    }
-
-    public String getSlrStatus() {
-        return slrStatus;
-    }
-
-    public void setSlrStatus(String slrStatus) {
-        this.slrStatus = slrStatus;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Store getStore() {
-        return store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
-    }
-
-    public Persion getPersion() {
-        return persion;
-    }
-
-    public void setPersion(Persion persion) {
-        this.persion = persion;
-    }
 }
