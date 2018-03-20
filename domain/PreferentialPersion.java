@@ -21,7 +21,7 @@ public class PreferentialPersion implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "preferential_relano")
-    private Integer preferentialRelano;
+    private Long preferentialRelano;
     /**
      * 排序
      */

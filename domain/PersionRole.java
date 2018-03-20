@@ -16,7 +16,7 @@ public class PersionRole implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "roleno")
-    private Integer roleno;
+    private Long roleno;
     /**
      * 状态
      */

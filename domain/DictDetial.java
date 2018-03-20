@@ -14,7 +14,7 @@ public class DictDetial implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "dict_detial_id")
-    private Integer dictDetialId;
+    private Long dictDetialId;
     /**
      * 编号
      */

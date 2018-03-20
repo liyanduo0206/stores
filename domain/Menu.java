@@ -17,10 +17,10 @@ public class Menu implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "menu_id")
-    private int menuId;
+    private Long menuId;
 
     @Column(name = "parent_id")
-    private int parentId;
+    private Long parentId;
     /**
      * 店铺ID
      */

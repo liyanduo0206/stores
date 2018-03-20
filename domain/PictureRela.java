@@ -19,7 +19,7 @@ public class PictureRela implements Serializable {
      */
     @Id
     @GeneratedValue
-    private Integer relano;
+    private Long relano;
     /**
      * 图片类型
      */

@@ -19,7 +19,7 @@ public class Store implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "store_id")
-    private Integer storeId;
+    private Long storeId;
     /**
      * 店铺名称
      */

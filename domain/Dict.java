@@ -19,7 +19,7 @@ public class Dict implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "dict_id")
-    private Integer dictId;
+    private Long dictId;
     /**
      * 编号
      */

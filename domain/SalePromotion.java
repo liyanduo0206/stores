@@ -1,7 +1,9 @@
 package com.myshop.store.domain;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,8 +12,7 @@ import java.util.*;
 /**
  * 促销规则
  */
-@Setter
-@Getter
+@Data
 @Entity
 @Table(name = "sale_promotion")
 public class SalePromotion implements Serializable {
@@ -20,7 +21,7 @@ public class SalePromotion implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "promotion_id")
-    private Integer promotionId;
+    private Long promotionId;
     /**
      * 店铺ID
      */
@@ -42,10 +43,11 @@ public class SalePromotion implements Serializable {
     @Column(name = "total_price")
     private double totalPrice;
     /**
-     * 产品ID
+     * 产品
      */
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @Column(name = "product_id")
-    private int productId;
+    private Product product;
     /**
      * 操作时间
      */
@@ -63,18 +65,6 @@ public class SalePromotion implements Serializable {
     @JoinColumn(name = "persion_id")
     private Persion persion;
 
-    @Override
-    public String toString() {
-        return "SalePromotion{" +
-                "promotionId=" + promotionId +
-                ", storeId=" + storeId +
-                ", ptnCode='" + ptnCode + '\'' +
-                ", ptnName='" + ptnName + '\'' +
-                ", totalPrice=" + totalPrice +
-                ", productId=" + productId +
-                ", pdate=" + pdate +
-                ", preferential=" + preferential +
-                ", persion=" + persion +
-                '}';
-    }
+
+
 }

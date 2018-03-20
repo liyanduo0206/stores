@@ -1,12 +1,11 @@
 package com.myshop.store.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
-@Setter
-@Getter
+
+@Data
 @Entity
 @Table(name = "user")
 public class User implements Serializable {
@@ -18,7 +17,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "user_id")
-    private Integer userId;
+    private Long userId;
     /**
      * 用户编号
      */
@@ -50,5 +49,6 @@ public class User implements Serializable {
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "persion_id")
     private Persion persion;
+
 
 }

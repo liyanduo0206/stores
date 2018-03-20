@@ -25,7 +25,7 @@ public class Address implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "address_id")
-    private Integer addressId;
+    private Long addressId;
     /**
      * 国家
      */

@@ -21,12 +21,12 @@ public class Preferential implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "preferential_id")
-    private Integer preferentialId;
+    private Long preferentialId;
     /**
      * 店铺ID
      */
     @Column(name = "store_id")
-    private int storeId;
+    private Long storeId;
     /**
      * 店铺名称
      */

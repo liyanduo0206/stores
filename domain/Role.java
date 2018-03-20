@@ -24,7 +24,7 @@ public class Role implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "role_id")
-    private Integer roleId;
+    private Long roleId;
     /**
      * 角色编号
      */

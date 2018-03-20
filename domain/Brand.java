@@ -22,7 +22,7 @@ public class Brand implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "brand_id")
-    private Integer brandId;
+    private Long brandId;
     /**
      * 品牌名称
      */

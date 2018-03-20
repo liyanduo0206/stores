@@ -20,7 +20,7 @@ public class ProductDetial implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "product_relano")
-    private Integer productRelano;
+    private Long productRelano;
     /**
      * 材质
      */

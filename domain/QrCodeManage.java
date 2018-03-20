@@ -22,7 +22,7 @@ public class QrCodeManage implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false,name = "qr_code_id")
-    private Integer qrCodeId;
+    private Long qrCodeId;
     /**
      * 二维码值
      */

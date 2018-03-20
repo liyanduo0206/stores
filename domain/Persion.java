@@ -24,7 +24,7 @@ public class Persion implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "persion_id")
-    private Integer persionId;
+    private Long persionId;
     /**
      * 人员编号
      */

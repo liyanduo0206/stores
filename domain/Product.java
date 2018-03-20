@@ -25,7 +25,7 @@ public class Product implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "product_id")
-    private Integer productId;
+    private Long productId;
     /**
      * 产品编号
      */
@@ -88,6 +88,11 @@ public class Product implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     private List<ProductDetial> productDetial;
 
+    /**
+     * 优惠条件
+     */
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+    private List<SalePromotion> salePromotions;
     /**
      * 店铺
      */

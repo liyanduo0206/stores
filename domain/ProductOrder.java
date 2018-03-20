@@ -23,7 +23,7 @@ public class ProductOrder implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "order_id")
-    private Integer orderId;
+    private Long orderId;
     /**
      * 人员ID
      */

@@ -18,7 +18,7 @@ public class Supplier implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "supplier_id")
-    private Integer supplierId;
+    private Long supplierId;
     /**
      * 供应商名称
      */

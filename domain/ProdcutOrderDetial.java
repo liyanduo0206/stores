@@ -19,7 +19,7 @@ public class ProdcutOrderDetial implements Serializable {
     @Id
     @GeneratedValue
     @Column(nullable = false, name = "order_detial_id")
-    private Integer orderDetialId;
+    private Long orderDetialId;
     /**
      * 数量
      */

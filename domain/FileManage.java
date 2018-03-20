@@ -20,7 +20,7 @@ public class FileManage implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "file_id")
-    private Integer fileId;
+    private Long fileId;
     /**
      * 文件类型
      */
