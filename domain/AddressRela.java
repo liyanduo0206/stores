@@ -14,8 +14,8 @@ public class AddressRela implements Serializable {
 
     private static final long serialVersionUID = -1600353225431752953L;
     @Id
-    @GeneratedValue
-    private long relano;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long relano;
 
     /**
      * 关联表类型

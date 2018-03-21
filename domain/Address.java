@@ -1,5 +1,6 @@
 package com.myshop.store.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,8 @@ import java.util.List;
 /**
  * 地址信息
  */
+//Spring Boot在返回JSON的时候默认会返回null字段，这个对客户端一般没什么作用，还会增加服务器带宽压力。使用如下配置可以屏蔽。
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Setter
 @Getter
 @Entity
@@ -23,7 +26,7 @@ public class Address implements Serializable {
      * 地址ID
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "address_id")
     private Long addressId;
     /**

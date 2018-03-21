@@ -21,7 +21,7 @@ public class ProductOrder implements Serializable {
      * 产品订单
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
     private Long orderId;
     /**

@@ -21,7 +21,7 @@ public class BarCodeManage implements Serializable {
      * 条形码ID
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "bar_code_id")
     private Long barCodeId;
     /**

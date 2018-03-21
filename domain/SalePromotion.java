@@ -19,7 +19,7 @@ public class SalePromotion implements Serializable {
     private static final long serialVersionUID = -5378577082142037080L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "promotion_id")
     private Long promotionId;
     /**
@@ -46,7 +46,7 @@ public class SalePromotion implements Serializable {
      * 产品
      */
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @Column(name = "product_id")
+    @JoinColumn(name = "product_id")
     private Product product;
     /**
      * 操作时间

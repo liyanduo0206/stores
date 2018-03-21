@@ -17,7 +17,7 @@ public class Store implements Serializable {
      * 店铺ID
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "store_id")
     private Long storeId;
     /**

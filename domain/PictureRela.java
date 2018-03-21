@@ -18,7 +18,7 @@ public class PictureRela implements Serializable {
      * 图片ID
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long relano;
     /**
      * 图片类型

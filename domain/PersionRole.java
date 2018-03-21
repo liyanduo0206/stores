@@ -14,7 +14,7 @@ public class PersionRole implements Serializable {
     private static final long serialVersionUID = -1939412051999752057L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "roleno")
     private Long roleno;
     /**

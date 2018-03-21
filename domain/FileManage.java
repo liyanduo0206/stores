@@ -18,7 +18,7 @@ public class FileManage implements Serializable {
      * 文件ID
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "file_id")
     private Long fileId;
     /**

@@ -19,7 +19,7 @@ public class Preferential implements Serializable {
 
     private static final long serialVersionUID = -2285153672128046376L;
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "preferential_id")
     private Long preferentialId;
     /**

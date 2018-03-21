@@ -16,7 +16,7 @@ public class Supplier implements Serializable {
     private static final long serialVersionUID = -8428525666912991269L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "supplier_id")
     private Long supplierId;
     /**

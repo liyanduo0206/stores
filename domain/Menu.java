@@ -15,7 +15,7 @@ public class Menu implements Serializable {
     private static final long serialVersionUID = 5701388260096121441L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "menu_id")
     private Long menuId;
 

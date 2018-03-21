@@ -20,7 +20,7 @@ public class Brand implements Serializable {
      * 品牌
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "brand_id")
     private Long brandId;
     /**

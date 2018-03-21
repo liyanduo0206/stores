@@ -17,7 +17,7 @@ public class ProdcutOrderDetial implements Serializable {
      * 详细订单
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "order_detial_id")
     private Long orderDetialId;
     /**

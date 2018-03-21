@@ -19,7 +19,7 @@ public class PreferentialPersion implements Serializable {
     private static final long serialVersionUID = -954279589981715726L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "preferential_relano")
     private Long preferentialRelano;
     /**

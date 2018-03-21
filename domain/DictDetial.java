@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class DictDetial implements Serializable {
     private static final long serialVersionUID = 3859426271150128225L;
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "dict_detial_id")
     private Long dictDetialId;
     /**

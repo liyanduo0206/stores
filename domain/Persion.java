@@ -1,5 +1,6 @@
 package com.myshop.store.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +11,7 @@ import java.util.*;
 /**
  * 人员
  */
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Setter
 @Getter
 @Entity
@@ -22,7 +23,7 @@ public class Persion implements Serializable {
      * 人员ID
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "persion_id")
     private Long persionId;
     /**

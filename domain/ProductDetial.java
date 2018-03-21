@@ -18,7 +18,7 @@ public class ProductDetial implements Serializable {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name = "product_relano")
     private Long productRelano;
     /**
